@@ -1,5 +1,5 @@
 
-<p align="center"><a href="https://poschapin.com/"><img src="https://user-images.githubusercontent.com/37667605/86309706-9af0ef80-bbd9-11ea-84e9-126d7c5aa547.png" alt="WooCommerce"></a></p>
+<p align="center"><a href="https://poschapin.com/"><img src="https://user-images.githubusercontent.com/37667605/86314652-713dc580-bbe5-11ea-83eb-749a41f60c65.png" alt="WooCommerce"></a></p>
 
 
 
