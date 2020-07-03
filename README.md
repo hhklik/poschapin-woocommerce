@@ -12,9 +12,9 @@ Plugin WordPress WooCommerce para recolección de pagos con tarjetas de credito 
 WooCommerce instalado.
 
 ### Instalar plugin en WordPress
-- Descargar el zip del repositorio github, se descargara una carpeta llamada **poschapin-woocommerce-master** 
+- Descargar el zip del repositorio github, se descargara un archivo zip llamado **poschapin-woocommerce-master.zip** 
   - [Click aqui para descargar](https://github.com/hhklik/poschapin-woocommerce/archive/master.zip)
-- Dentro del panel de control de **wordpress(su tienda en linea)** hacer lo siguiente  `plugins > añadir nuevo > click boton subir plugin > click en booton seleccionar plugin` 
+- Dentro del panel de control de **wordpress(su tienda en linea)** hacer lo siguiente  `plugins > añadir nuevo > click boton subir plugin > click en booton seleccionar plugin` **poschapin-woocommerce-master.zip**
 - Activar plugin
 
 ### Configurar public_key y private_key
