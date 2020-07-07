@@ -30,7 +30,7 @@ Y listo ya puede comenzar a recolectar pagos.
 
 ### Cambiar llaves publicas y privada de una billetera
 Ingresando al panel de control de POSchapin dirijase a `wallet > Elegir wallet y dar click en EDIT` en ese apartado se va visualizar el siguiente icono 
-- <img src="https://poschapin.com/wp-content/assets/img/key_reload.svg" width="25" alt="reload_keys"> al dar click aparecera el siguiente icono y con esto estas solicitando cambio de llave de seguridad ya se **public_key** o **private_key**  
+- <img src="https://poschapin.com/wp-content/assets/img/key_reload.svg" width="25" alt="reload_keys"> al dar click aparecera el siguiente icono y con esto estas solicitando cambio de llave de seguridad ya sea **public_key** o **private_key**  
 - <img src="https://poschapin.com/wp-content/assets/img/return.svg" width="25" alt="reload_keys"> con el cual puedes retornar a la lleve de seguridad anterior
 - Luego click **Actualizar** o **update**
 
