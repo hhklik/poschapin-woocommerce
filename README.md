@@ -4,6 +4,7 @@
 
 
 # poschapin-woocommerce
+~Current Version:1.4~
 
 Plugin WordPress WooCommerce para recolección de pagos con tarjetas de credito y debito
 
@@ -42,6 +43,8 @@ Ingresando al panel de control de POSchapin dirijase a `wallet > Elegir wallet y
 ## Autores
 
 - Humberto Herrador (para POSchapin 2020)
+
+
 
 
 
