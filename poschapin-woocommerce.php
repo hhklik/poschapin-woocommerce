@@ -3,7 +3,7 @@
 Plugin Name: POSchapin to WooCommerce
 Plugin URI: https://github.com/hhklik/poschapin-woocommerce
 Description: POSchapin payment collection for WooCommerce
-Version: 0.0.4
+Version: 0.0.5
 Author: POSchapin
 Author URI: https://github.com/hhklik/poschapin-woocommerce
 Text Domain: poschapinwoo
@@ -97,7 +97,7 @@ function wc_POSchapin_gateway_init() {
             $this->enabled = $this->get_option('enabled');
             // Define user set variables
             //$this->title        = strlen($this->get_option( 'title' )) > 0 ? $this->get_option( 'title' ) : 'Tarjeta de Crédito via POSchapin';
-            $this->title        = 'Tarjeta de crédito por POSchapin';
+            $this->title        = 'Tarjeta de Crédito/Débito por POSchapin';
             //$this->description  = $this->get_option( 'description' );
             //$this->instructions = $this->get_option( 'instructions', $this->description );
 
@@ -247,7 +247,7 @@ function wc_POSchapin_gateway_init() {
                         </p>
                           <div class="clear"></div>
                         <p class="form-row ">
-                                <label for="is_ccnum">Numero de Tarjeta:<span class="required">*</span>
+                                <label for="is_ccnum">Número de Tarjeta:<span class="required">*</span>
                                 	<img class="bankid" src="" style="width: 44px;">
                                 </label>
                                 <input type="text" class="input-text number" id="poschapin_card_number" name="poschapin_card_number" maxlength="19" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required  >
