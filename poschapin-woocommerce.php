@@ -3,7 +3,7 @@
 Plugin Name: POSchapin to WooCommerce
 Plugin URI: https://github.com/hhklik/poschapin-woocommerce
 Description: POSchapin payment collection for WooCommerce
-Version: 0.0.3
+Version: 0.0.4
 Author: POSchapin
 Author URI: https://github.com/hhklik/poschapin-woocommerce
 Text Domain: poschapinwoo
@@ -247,7 +247,7 @@ function wc_POSchapin_gateway_init() {
                         </p>
                           <div class="clear"></div>
                         <p class="form-row ">
-                                <label for="is_ccnum">Tarjeta de Cr&eacute;dito:<span class="required">*</span>
+                                <label for="is_ccnum">Numero de Tarjeta:<span class="required">*</span>
                                 	<img class="bankid" src="" style="width: 44px;">
                                 </label>
                                 <input type="text" class="input-text number" id="poschapin_card_number" name="poschapin_card_number" maxlength="19" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required  >
