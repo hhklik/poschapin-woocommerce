@@ -3,7 +3,7 @@
 Plugin Name: POSchapin to WooCommerce
 Plugin URI: https://github.com/hhklik/poschapin-woocommerce
 Description: POSchapin payment collection for WooCommerce
-Version: 0.0.5
+Version: 0.0.6
 Author: POSchapin
 Author URI: https://github.com/hhklik/poschapin-woocommerce
 Text Domain: poschapinwoo
@@ -106,7 +106,7 @@ function wc_POSchapin_gateway_init() {
             add_action( 'woocommerce_thankyou_' . $this->id, array( $this, 'thankyou_page' ) );
 
             // Customer Emails
-            add_action( 'woocommerce_email_before_order_table', array( $this, 'email_instructions' ), 10, 3 );
+            //add_action( 'woocommerce_email_before_order_table', array( $this, 'email_instructions' ), 10, 3 );
 
             add_action( 'wp_enqueue_scripts', array( $this, 'poschapin_woocommerce_script' ) );
 
@@ -142,9 +142,10 @@ function wc_POSchapin_gateway_init() {
             	                switch ($response_code) {
             	                	case '100':
             	                	case 100:
-            	                		$order->add_order_note( __( 'POSchapin payment completed.', 'wc_POSchapin4WoOCommerce' ) );
+            	                		//$order->add_order_note( __( 'POSchapin payment completed.', 'wc_POSchapin4WoOCommerce' ) );
             	                		// Mark order as Paid
-            	                		$order->payment_complete();
+            	                		//$order->payment_complete();
+                                        $order->update_status('processing', 'POSchapin payment completed.');
             	                		// Empty the cart (Very important step)
             	                		$woocommerce->cart->empty_cart();
             	                		// Reduce stock levels
@@ -162,14 +163,16 @@ function wc_POSchapin_gateway_init() {
             	                		wc_add_notice( "Codigo de transacción - <strong>".$transactionid."</strong>", 'error' );
             	                		wc_add_notice( "Codigo de operación  - " . $operationid,'error' );
             	                		$note = $responsetext . '|' . $transactionid . '|' . $operationid . '| response:' . $response . '| response_code:' . $response_code;
-            	                		$order->add_order_note( 'POSchapin Error: '. print_r($note,true)  );
+            	                		//$order->add_order_note( 'POSchapin Error: '. print_r($note,true)  );
+                                        $order->update_status('pending', 'POSchapin Error: '. print_r($note,true)); 
             	                		break;
             	                	case '300':
             	                	case 300:
             	                		$logo = '<img src="'.plugins_url('assets/img/icon/atencion.svg', __FILE__).'" style="width: 75px;"/>';
             	                		wc_add_notice( $logo." Error - ".$responsetext, 'error' );
             	                		$note = $responsetext . '| response:' . $response . '| response_code:' . $response_code;
-            	                		$order->add_order_note( 'POSchapin Error: '. print_r($note,true)  );
+            	                		//$order->add_order_note( 'POSchapin Error: '. print_r($note,true)  );
+                                        $order->update_status('failed', 'POSchapin Error: '. print_r($note,true)); 
             	                		break;
             	              
             	                }
@@ -653,13 +656,13 @@ function wc_POSchapin_gateway_init() {
             $this -> generate_settings_html();
             echo '</table>';
         }
-        public function email_instructions( $order, $sent_to_admin, $plain_text = false ) {
+        /*public function email_instructions( $order, $sent_to_admin, $plain_text = false ) {
             if ( ! $sent_to_admin && $this->id === $order->payment_method && $order->has_status( 'on-hold' ) ) {
 				if ( $this->instructions ){
                     echo wpautop( wptexturize( $this->instructions ) ) . PHP_EOL;
 				}
             }
-        }
+        }*/
         /**
          * Output for the order received page.
          */
