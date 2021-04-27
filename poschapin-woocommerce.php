@@ -3,7 +3,7 @@
 Plugin Name: POSchapin to WooCommerce
 Plugin URI: https://github.com/hhklik/poschapin-woocommerce
 Description: POSchapin payment collection for WooCommerce
-Version: 0.0.6
+Version: 0.0.7
 Author: POSchapin
 Author URI: https://github.com/hhklik/poschapin-woocommerce
 Text Domain: poschapinwoo
@@ -789,7 +789,6 @@ function wc_POSchapin_gateway_init() {
 				$data['first_name'] = $_POST['poschapin_ccname'];
 				$data['ccexp'] = str_replace(' ', '',$_POST['poschapin_expmonth'])."/".str_replace(' ', '',$_POST['poschapin_expyear']);
 				$data['cvv'] = $_POST['poschapin_cvv'];
-				$data['string_hash'] = $string_hash;
 
 				$data['address1'] = html_entity_decode($order->billing_address_1, ENT_QUOTES, 'UTF-8');
 				$data['city'] = html_entity_decode($order->billing_city, ENT_QUOTES, 'UTF-8');
