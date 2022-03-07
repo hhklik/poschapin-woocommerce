@@ -3,7 +3,7 @@
 Plugin Name: POSchapin to WooCommerce
 Plugin URI: https://github.com/hhklik/poschapin-woocommerce
 Description: POSchapin payment collection for WooCommerce
-Version: 0.0.7
+Version: 0.0.8
 Author: POSchapin
 Author URI: https://github.com/hhklik/poschapin-woocommerce
 Text Domain: poschapinwoo
@@ -242,7 +242,7 @@ function wc_POSchapin_gateway_init() {
             }
 			
             echo '	<fieldset>
-                        <p><img src="'.plugins_url('assets/img/logo/logo_poschapin_woocommerce.png', __FILE__).'" width="100%;"" style="max-height: none;"></p>
+                        <p><img src="'.plugins_url('assets/img/logo/logo_poschapin_woocommerce.png', __FILE__).'" width="100%;"" style="max-height: none;height: auto;margin-left: 0;"></p>
 
                         <p class="form-row ">
                                 <label for="is_ccnum">Nombre Completo:<span class="required">*</span></label>
@@ -251,7 +251,7 @@ function wc_POSchapin_gateway_init() {
                           <div class="clear"></div>
                         <p class="form-row ">
                                 <label for="is_ccnum">Número de Tarjeta:<span class="required">*</span>
-                                	<img class="bankid" src="" style="width: 44px;">
+                                	<img class="bankid" src="" style="width: 44px;display: none;">
                                 </label>
                                 <input type="text" class="input-text number" id="poschapin_card_number" name="poschapin_card_number" maxlength="19" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required  >
                         </p>
@@ -264,7 +264,8 @@ function wc_POSchapin_gateway_init() {
                                     -webkit-appearance: menulist;
                                     margin-right: 15px;
                                     -moz-appearance: menulist;
-                                    float: left;">
+                                    float: left;
+                                    background: none;">
                                         <option value="">Mes</option>
                                         <option value="01">01</option>
                                         <option value="02">02</option>
@@ -283,7 +284,8 @@ function wc_POSchapin_gateway_init() {
                                 -webkit-appearance: menulist;
                                 margin-right: 15px;
                                 -moz-appearance: menulist;
-                                float:left;">
+                                float:left;
+                                background:none;">
                                       <option value="">A&ntilde;o</option>
                                       ' . $year_options . '
                                </select>
