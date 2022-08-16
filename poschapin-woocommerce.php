@@ -3,7 +3,7 @@
 Plugin Name: POSchapin to WooCommerce
 Plugin URI: https://github.com/hhklik/poschapin-woocommerce
 Description: POSchapin payment collection for WooCommerce
-Version: 0.0.8
+Version: 0.0.9
 Author: POSchapin
 Author URI: https://github.com/hhklik/poschapin-woocommerce
 Text Domain: poschapinwoo
@@ -242,7 +242,8 @@ function wc_POSchapin_gateway_init() {
             }
 			
             echo '	<fieldset>
-                        <p><img src="'.plugins_url('assets/img/logo/logo_poschapin_woocommerce.png', __FILE__).'" width="100%;"" style="max-height: none;height: auto;margin-left: 0;"></p>
+                        <p style="text-align: center;">
+                        <img src="'.plugins_url('assets/img/logo/logo_poschapin_woocommerce.png', __FILE__).'" style="width=auto;max-height: none;height: auto;margin-left: 0;"></p>
 
                         <p class="form-row ">
                                 <label for="is_ccnum">Nombre Completo:<span class="required">*</span></label>
@@ -260,7 +261,7 @@ function wc_POSchapin_gateway_init() {
 
                         <p class="form-row" style="width:100%">
                                <label for="cc-expire-month">Fecha Expiraci&oacute;n:<span class="required">*</span></label>
-                               <select name="poschapin_expmonth" id="poschapin_expmonth" class="input-text woocommerce-select woocommerce-cc-month cc_exp" required style="width:auto; -webkit-appearance: menulist; margin-right:15px;width: auto;
+                               <select name="poschapin_expmonth" id="poschapin_expmonth" class="input-text woocommerce-select woocommerce-cc-month cc_exp" required style="visibility: visible;width:auto; -webkit-appearance: menulist; margin-right:15px;width: auto;
                                     -webkit-appearance: menulist;
                                     margin-right: 15px;
                                     -moz-appearance: menulist;
@@ -280,7 +281,7 @@ function wc_POSchapin_gateway_init() {
                                         <option value="11">11</option>
                                         <option value="12">12</option>
                                </select>
-                                <select name="poschapin_expyear" id="poschapin_expyear" class="input-text woocommerce-select woocommerce-cc-year cc_exp" required style="width:auto; -webkit-appearance: menulist;width: auto;
+                                <select name="poschapin_expyear" id="poschapin_expyear" class="input-text woocommerce-select woocommerce-cc-year cc_exp" required style="visibility: visible;width:auto; -webkit-appearance: menulist;width: auto;
                                 -webkit-appearance: menulist;
                                 margin-right: 15px;
                                 -moz-appearance: menulist;
