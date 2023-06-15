@@ -3,7 +3,7 @@
 Plugin Name: POSchapin to WooCommerce
 Plugin URI: https://github.com/hhklik/poschapin-woocommerce
 Description: POSchapin payment collection for WooCommerce
-Version: 0.0.9
+Version: 0.0.10
 Author: POSchapin
 Author URI: https://github.com/hhklik/poschapin-woocommerce
 Text Domain: poschapinwoo
@@ -808,7 +808,7 @@ function wc_POSchapin_gateway_init() {
 	            //http://poschapin.com:3000/transaccion/json
 	            return array(
 	                'result' => 'success',
-	                'redirect' => 'https://pos-chapin.appspot.com/transaccion/json?'.http_build_query($data)
+	                'redirect' => 'https://pos-chapin.appspot.com/api/transaccion/redirect?'.http_build_query($data)
 	            );
 	        }
         }
